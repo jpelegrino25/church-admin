@@ -1,6 +1,7 @@
 package com.julioluis.churchadmin.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -17,6 +18,7 @@ public class Member implements Serializable {
     private String lastName;
     @Column(name = "start_date")
     @Temporal(TemporalType.TIMESTAMP)
+    @NotNull
     private Date startDate;
     @Column(name = "end_date")
     @Temporal(TemporalType.TIMESTAMP)

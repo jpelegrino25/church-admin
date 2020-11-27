@@ -2,6 +2,7 @@ package com.julioluis.churchadmin.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -12,13 +13,14 @@ public class Member implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Size(min = 3,max = 45)
     @Column(name = "first_name",length = 45)
     private String firstName;
+    @Size(min = 3,max = 45)
     @Column(name = "last_name",length = 45)
     private String lastName;
     @Column(name = "start_date")
     @Temporal(TemporalType.TIMESTAMP)
-    @NotNull
     private Date startDate;
     @Column(name = "end_date")
     @Temporal(TemporalType.TIMESTAMP)

@@ -1,15 +1,19 @@
 package com.julioluis.churchadmin.entities;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-public class MemberPositionId {
+public class MemberPositionId implements Serializable {
 
     @Column(name = "member_id")
+    @Basic(optional = false)
     private Long memberId;
-    @Column(name = "member_id")
+    @Basic(optional = false)
+    @Column(name = "position_id")
     private Long positionId;
 
 

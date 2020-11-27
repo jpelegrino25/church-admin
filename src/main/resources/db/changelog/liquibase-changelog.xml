@@ -8,6 +8,7 @@
    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="change-set/2020-11-26.xml" relativeToChangelogFile="true"></include>
+    <include file="change-set/2020-11-27.xml" relativeToChangelogFile="true"></include>
 
 
 

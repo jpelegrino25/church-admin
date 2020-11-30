@@ -7,10 +7,20 @@
    http://www.liquibase.org/xml/ns/dbchangelog
    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <include file="change-set/2020-11-26.xml" relativeToChangelogFile="true"></include>
-    <include file="change-set/2020-11-27.xml" relativeToChangelogFile="true"></include>
-    <include file="change-set/2020-11-30.xml" relativeToChangelogFile="true"></include>
+    <changeSet author="julioluis" id="jl-2020-11-30-01">
+        <sql>
+            INSERT INTO position (id,description)
+            VALUES(1,"Primer Anciano"),
+            (2,"Segundo Anciano"),
+            (3,"Secretario"),
+            (4,"Tesorero"),
+            (5,"Sociedad de Jovenes"),
+            (6,"Obras misionera"),
+            (7,"Director de Diaconos"),
+            (8,"Escuela Sabatica"),
+            (9,"Director de canto");
 
-
+        </sql>
+    </changeSet>
 
 </databaseChangeLog>

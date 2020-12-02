@@ -3,6 +3,7 @@ package com.julioluis.churchadmin.entities;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -11,9 +12,11 @@ public class MemberPositionId implements Serializable {
 
     @Column(name = "member_id")
     @Basic(optional = false)
+    @NotNull(message = "memberId is required")
     private Long memberId;
     @Basic(optional = false)
     @Column(name = "position_id")
+    @NotNull(message = "positionId is required")
     private Long positionId;
 
 
